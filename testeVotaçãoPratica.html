@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilização.css">
+    <title>Votação</title>
+</head>
+
+<body>
+
+    <div class="titulo">Consulte se você pode votar</div>
+
+    <div class="botoes">
+        <input class="input" placeholder="Insira o seu nome" id="input_nome">
+        <input class="input" placeholder="Insira a sua idade" id="input_idade">
+    </div>
+
+    <div class="buttom">
+        <button onclick="calcular()"> Verificar</button>
+    </div>
+
+    <div id="div_imagem"></div>
+
+</body>
+
+</html>
+
+<script>
+    function calcular() {
+        var nome = input_nome.value;
+        var idade = Number(input_idade.value);
+
+        if (idade >= 16) {
+            alert(`${nome}, já pode votar!`)
+            alert(`Não esqueça de levar documento de identificação e titulo de eleitor :)`)
+            div_imagem.innerHTML = `<img class="meme" src="https://s2.glbimg.com/sw4N5pccifwc5LoNLZfzscH1CT0=/645x388/i.glbimg.com/og/ig/infoglobo1/f/original/2022/05/03/frxrye0wqaex3er.jpg">`
+        }
+
+
+        else {
+            alert(`Ops... cedo demais para votar`)
+        }
+
+       
+
+
+    }
+</script>
+
